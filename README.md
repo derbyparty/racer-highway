@@ -1,13 +1,14 @@
 # racer-highway
 
-This is a plugin to use racer over a websocket and browserchannel connection.
+Transport plugin for [Racer](https://github.com/codeparty/racer). It uses Websocket and downgrades to browserchannel in 
+the case of old browsers and proxy errors.
 
 ## Usage
 
 In the server part of your app:
 
 ```js
-var racerHighway = require('racer-highway'); 
+var racerHighWay = require('racer-highway'); 
 
 // ...
 // var server = http.createServer
@@ -19,11 +20,24 @@ var racerHighway = require('racer-highway');
 // var store  = derby.createStore
 // ...
 
-highwayHandlers = racerHighway(store);
+var handlers = racerHighWay(store);
 
-express.App.use(highwayHandlers.middlware);
+expressApp = express();
 
-server.on('upgrade', highwayHandlers.upgrade);
+// ...
+
+expressApp.use(cookieParser());
+
+expressApp.use(session({
+  // ...
+}));
+
+// ...
+
+expressApp.use(handlers.middleware)
+
+
+server.on('upgrade', handlers.upgrade);
 ```
 
 ## MIT License
