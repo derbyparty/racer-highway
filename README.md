@@ -27,14 +27,11 @@ expressApp = express();
 // ...
 
 expressApp.use(cookieParser());
-
-expressApp.use(session({
-  // ...
-}));
+expressApp.use(session());
 
 // ...
 
-expressApp.use(handlers.middleware)
+expressApp.use(handlers.middleware);
 
 
 server.on('upgrade', handlers.upgrade);
