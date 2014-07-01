@@ -1,6 +1,6 @@
 # racer-highway
 
-Transport plugin for [Racer](https://github.com/codeparty/racer). It uses Websocket and downgrades to browserchannel in 
+Transport plugin for [Racer](https://github.com/codeparty/racer). It uses pure `websockets` and downgrades to `browserchannel` in 
 the case of old browsers and proxy errors.
 
 ## Usage
