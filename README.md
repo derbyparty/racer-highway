@@ -26,8 +26,6 @@ express.App.use(highwayHandlers.middlware);
 server.on('upgrade', highwayHandlers.upgrade);
 ```
 
-If you use `racer-ws` with derby make sure this is before any calls to `app.writeScripts`.
-
 ## MIT License
 Copyright (c) 2014 by Artur Zayats
 
