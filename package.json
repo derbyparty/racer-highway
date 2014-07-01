@@ -1,0 +1,15 @@
+{
+  "name": "racer-ws",
+  "description": "Websocket plugin for Racer",
+  "version": "0.0.1",
+  "main": "./lib/server.js",
+  "browser": {
+    "main": "./lib/browser.js"
+  },
+  "dependencies": {
+    "faye-websocket": "^0.7",
+    "through": "^2.3.4"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
