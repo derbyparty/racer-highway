@@ -1,6 +1,6 @@
 {
-  "name": "racer-ws",
-  "description": "Websocket plugin for Racer",
+  "name": "racer-highway",
+  "description": "Websocket and browserchannel transport for Racer",
   "version": "0.0.1",
   "main": "./lib/server.js",
   "browser": {
@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "faye-websocket": "^0.7",
+    "browserchannel": "^1.2",
     "through": "^2.3.4"
   },
   "devDependencies": {},
