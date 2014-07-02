@@ -12,5 +12,15 @@
     "through": "^2.3.4"
   },
   "devDependencies": {},
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "keywords": [
+    "derby",
+    "derbyjs",
+    "racer",
+    "racerjs",
+    "websocket",
+    "browserchannel"
+  ],
+  "author": "Artur Zayats <zag2art@gmail.com>",
+  "license": "MIT"
 }
