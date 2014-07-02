@@ -37,6 +37,14 @@ expressApp.use(handlers.middleware);
 server.on('upgrade', handlers.upgrade);
 ```
 
+Connect session support in hooks:
+```
+var serverOptions = {
+  session: session()
+}
+var handlers = racerHighWay(store, serverOptions);
+```
+
 ## MIT License
 Copyright (c) 2014 by Artur Zayats
 
