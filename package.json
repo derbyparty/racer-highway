@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "faye-websocket": "^0.7",
-    "browserchannel": "^1.2",
+    "browserchannel": "^2.0",
+    "node-uuid": "~1.4.1",
     "through": "^2.3.4"
   },
   "devDependencies": {},
