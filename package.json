@@ -7,7 +7,7 @@
     "main": "./lib/browser.js"
   },
   "dependencies": {
-    "faye-websocket": "^0.7",
+    "ws": "~0.4",
     "browserchannel": "^2.0",
     "through": "^2.3.4"
   },
