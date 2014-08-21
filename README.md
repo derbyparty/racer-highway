@@ -1,4 +1,5 @@
 # racer-highway
+[![NPM](https://nodei.co/npm/racer-highway.png?downloads=true)](https://nodei.co/npm/racer-highway/)
 
 Transport plugin for [Racer](https://github.com/codeparty/racer). It uses pure `websockets` and downgrades to `browserchannel` in 
 the case of old browsers and proxy errors.
