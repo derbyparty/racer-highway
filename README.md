@@ -9,7 +9,7 @@ the case of old browsers and proxy errors.
 In the server part of your app:
 
 ```js
-var racerHighWay = require('racer-highway'); 
+var highway = require('racer-highway'); 
 
 // ...
 // var server = http.createServer
@@ -21,7 +21,7 @@ var racerHighWay = require('racer-highway');
 // var store  = derby.createStore
 // ...
 
-var handlers = racerHighWay(store);
+var handlers = highway(store);
 
 expressApp = express();
 
