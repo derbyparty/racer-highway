@@ -1,7 +1,7 @@
 {
   "name": "racer-highway",
   "description": "Websocket and browserchannel transport for Racer",
-  "version": "1.4.3",
+  "version": "1.4.2",
   "main": "./lib/server.js",
   "browser": {
     "main": "./lib/browser.js"
@@ -22,11 +22,11 @@
     "browserchannel"
   ],
   "repository": {
-    "type": "git",
-    "url": "git://github.com/derbyparty/racer-highway.git"
+    "_type": "git",
+    "_url": "git://github.com/derbyparty/racer-highway.git"
   },
   "bugs": {
-    "url": "https://github.com/derbyparty/racer-highway/issues"
+    "_url": "https://github.com/derbyparty/racer-highway/issues"
   },
   "author": "Artur Zayats <zag2art@gmail.com>",
   "license": "MIT"
