@@ -7,9 +7,10 @@
     "main": "./lib/browser.js"
   },
   "dependencies": {
-    "ws": "~0.4",
     "browserchannel": "^2.0",
-    "through": "^2.3.4"
+    "extend": "^2.0.0",
+    "through": "^2.3.4",
+    "ws": "~0.4"
   },
   "devDependencies": {},
   "optionalDependencies": {},
