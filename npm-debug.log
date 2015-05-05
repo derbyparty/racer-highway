@@ -1,0 +1,107 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.7.5
+3 info using node@v0.10.38
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/admin/workfiles/racer-highway',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/admin/.npm/racer-highway/3.0.1/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/admin/.npm/racer-highway/3.0.1/package.tgz',
+10 verbose tar pack   '/Users/admin/workfiles/racer-highway' ]
+11 verbose tarball /Users/admin/.npm/racer-highway/3.0.1/package.tgz
+12 verbose folder /Users/admin/workfiles/racer-highway
+13 info prepublish racer-highway@3.0.1
+14 verbose addLocalTarball adding from inside cache /Users/admin/.npm/racer-highway/3.0.1/package.tgz
+15 silly cache afterAdd racer-highway@3.0.1
+16 verbose afterAdd /Users/admin/.npm/racer-highway/3.0.1/package/package.json not in flight; writing
+17 verbose afterAdd /Users/admin/.npm/racer-highway/3.0.1/package/package.json written
+18 silly publish { name: 'racer-highway',
+18 silly publish   description: 'Websocket and browserchannel transport for Racer',
+18 silly publish   version: '3.0.1',
+18 silly publish   main: './lib/server.js',
+18 silly publish   browser: { main: './lib/browser.js' },
+18 silly publish   dependencies:
+18 silly publish    { browserchannel: '^2.0',
+18 silly publish      extend: '^2.0.0',
+18 silly publish      through: '^2.3.4',
+18 silly publish      ws: '~0.4' },
+18 silly publish   devDependencies: {},
+18 silly publish   optionalDependencies: {},
+18 silly publish   keywords:
+18 silly publish    [ 'derby',
+18 silly publish      'derbyjs',
+18 silly publish      'racer',
+18 silly publish      'racerjs',
+18 silly publish      'websocket',
+18 silly publish      'browserchannel' ],
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git://github.com/derbyparty/racer-highway.git' },
+18 silly publish   bugs: { url: 'https://github.com/derbyparty/racer-highway/issues' },
+18 silly publish   author: { name: 'Artur Zayats', email: 'zag2art@gmail.com' },
+18 silly publish   license: 'MIT',
+18 silly publish   readme: '# racer-highway\n[![NPM](https://nodei.co/npm/racer-highway.png?downloads=true)](https://nodei.co/npm/racer-highway/)\n\nTransport plugin for [Racer](https://github.com/codeparty/racer). It uses pure `websockets` and fallbacks to `browserchannel` in the case of old browsers and proxy errors. If you only need to use `websockets` try [racer-ws](https://github.com/derbyparty/racer-ws).\n\n## Usage\n\nIn the server part of your app:\n\n```js\nvar highway = require(\'racer-highway\'); \n\n// ...\n// var server = http.createServer\n// ...\n\n// ...\n// var store  = racer.createStore \n// or\n// var store  = derby.createStore\n// ...\n\nvar handlers = highway(store);\n\nexpressApp = express();\n\n// ...\n\nexpressApp.use(cookieParser());\nexpressApp.use(session());\n\n// ...\n\nexpressApp.use(handlers.middleware);\n\n\nserver.on(\'upgrade\', handlers.upgrade);\n```\n\nConnect session support in hooks:\n```\nvar serverOptions = {\n  session: session()\n}\nvar handlers = racerHighWay(store, serverOptions);\n```\n\n## WebSocket Info\n\n* [What is WebSocket?](https://www.websocket.org/)\n* [Nginx WebSocket Info](http://nginx.org/en/docs/http/websocket.html)\n* [Heroku WebSocket Info](https://devcenter.heroku.com/articles/websockets)\n\n## MIT License\nCopyright (c) 2014 by Artur Zayats\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'c6d4e393bd157447d16260998a71059f626bfbac',
+18 silly publish   homepage: 'https://github.com/derbyparty/racer-highway',
+18 silly publish   _id: 'racer-highway@3.0.1',
+18 silly publish   scripts: {},
+18 silly publish   _shasum: 'cef08fc5f4ef7825413b4a1134a97f38f0b49978',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name racer-highway
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/racer-highway
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/admin/.npm/racer-highway/3.0.1/package.tgz
+25 verbose request uri https://registry.npmjs.org/racer-highway
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 08:27:49
+28 verbose request id 5ecf48f0f8947c2b
+29 http request PUT https://registry.npmjs.org/racer-highway
+30 http 403 https://registry.npmjs.org/racer-highway
+31 verbose headers { date: 'Mon, 13 Apr 2015 05:27:50 GMT',
+31 verbose headers   server: 'Apache',
+31 verbose headers   'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=60',
+31 verbose headers   'content-length': '95',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   'x-served-by': 'cache-fra1225-FRA',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1428902869.938008,VS0,VE891',
+31 verbose headers   'keep-alive': 'timeout=10, max=50',
+31 verbose headers   connection: 'Keep-Alive' }
+32 verbose request invalidating /Users/admin/.npm/registry.npmjs.org/racer-highway on PUT
+33 error publish Failed PUT 403
+34 verbose stack Error: "You cannot publish over the previously published version 3.0.1." : racer-highway
+34 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+34 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+34 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:360:22)
+34 verbose stack     at Request.emit (events.js:98:17)
+34 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1202:14)
+34 verbose stack     at Request.emit (events.js:117:20)
+34 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1150:12)
+34 verbose stack     at IncomingMessage.emit (events.js:117:20)
+34 verbose stack     at _stream_readable.js:944:16
+34 verbose stack     at process._tickCallback (node.js:448:13)
+35 verbose statusCode 403
+36 verbose pkgid racer-highway
+37 verbose cwd /Users/admin/workfiles/racer-highway
+38 error Darwin 14.1.0
+39 error argv "node" "/usr/local/bin/npm" "publish"
+40 error node v0.10.38
+41 error npm  v2.7.5
+42 error code E403
+43 error "You cannot publish over the previously published version 3.0.1." : racer-highway
+44 error If you need help, you may report this error at:
+44 error     <https://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]
