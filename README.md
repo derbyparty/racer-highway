@@ -45,6 +45,25 @@ var serverOptions = {
 var handlers = racerHighWay(store, serverOptions);
 ```
 
+## Browserify
+
+Racer Highway will bundle the client browser script using Browserify in the
+call to `store.bundle(...)`, as illustrated in the
+[racer-examples](https://github.com/derbyjs/racer-examples).  However, if you
+want to do this ahead of time, you can add this to your gulp browserify task
+using something like:
+
+```
+var browserify = require('browserify');
+var racerClientBundle = require('racer-highway/lib/bundle');
+
+// ...
+
+bundler = browserify(opts);
+// this adds the racer-highway/lib/browser.js to our bundle
+(racerClientBundle())(bundler);
+```
+
 ## WebSocket Info
 
 * [What is WebSocket?](https://www.websocket.org/)
