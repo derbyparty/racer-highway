@@ -2,9 +2,9 @@
   "name": "racer-highway",
   "description": "Websocket and browserchannel transport for Racer",
   "version": "4.1.0",
-  "main": "./lib/server.js",
+  "main": "./lib/server",
   "browser": {
-    "main": "./lib/browser.js"
+    "main": "./lib/browser"
   },
   "dependencies": {
     "browserchannel": "^2.0",
