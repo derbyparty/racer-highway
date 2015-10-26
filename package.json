@@ -1,7 +1,7 @@
 {
   "name": "racer-highway",
   "description": "Websocket and browserchannel transport for Racer",
-  "version": "6.0.2",
+  "version": "6.1.0",
   "main": "./lib/server",
   "browser": {
     "main": "./lib/browser"
