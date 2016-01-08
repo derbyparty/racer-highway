@@ -3,6 +3,9 @@
 
 Transport plugin for [Racer](https://github.com/codeparty/racer). It uses pure `websockets` and fallbacks to `browserchannel` in the case of old browsers and proxy errors. If you only need to use `websockets` try [racer-ws](https://github.com/derbyparty/racer-ws).
 
+## Note
+Since version 7.0.0 racer-highway supports only racer >= 0.8
+
 ## Usage
 
 In the server part of your app:
