@@ -58,7 +58,7 @@ call to `store.bundle(...)`, as illustrated in the
 want to do this ahead of time, you can add this to your gulp browserify task
 using something like:
 
-```
+```js
 var browserify = require('browserify');
 var racerClientBundle = require('racer-highway/lib/bundle');
 
@@ -68,6 +68,31 @@ bundler = browserify(opts);
 // this adds the racer-highway/lib/browser.js to our bundle
 (racerClientBundle())(bundler);
 ```
+
+## Client Options
+
+A client options object can be passed to `racerClientBundle(clientOptions)`
+to override some aspects of the default behaviour.
+
+In addition, there is a `racer.overrideClientOptions(overrideOptions)` method
+that can be called on the client before `racer.createModel(data)` to provide
+extra, dynamic, customisation post-bundling.
+
+This can be used in the client browser code to, for example, force the use of
+browser channel (for testing) or pass an extraParams object:
+
+```js
+racer.overrideClientOptions({
+  browserChannelOnly: true,
+  extraParams: {
+    ticket: "<authentication-ticket>"
+  }
+})
+```
+
+`extraParams` holds name-value pairs that will get added to the query string
+of the websocket connection request and each browser channel request and can
+be useful for implementing ticket based (non-cookie) session authentication.
 
 ## WebSocket Info
 
