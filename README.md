@@ -58,7 +58,7 @@ call to `store.bundle(...)`, as illustrated in the
 want to do this ahead of time, you can add this to your gulp browserify task
 using something like:
 
-```
+```js
 var browserify = require('browserify');
 var racerClientBundle = require('racer-highway/lib/bundle');
 
@@ -68,6 +68,15 @@ bundler = browserify(opts);
 // this adds the racer-highway/lib/browser.js to our bundle
 (racerClientBundle())(bundler);
 ```
+
+## Client Options
+
+A client options object can be passed to `racerClientBundle(clientOptions)`
+to override some aspects of the default behaviour.
+
+In addition, there is a `racer.overrideClientOptions(overrideOptions)` method
+that can be called on the client before `racer.createModel(data)` to provide
+extra, dynamic, customisation post-bundling.
 
 ## WebSocket Info
 
