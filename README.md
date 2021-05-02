@@ -78,6 +78,22 @@ In addition, there is a `racer.overrideClientOptions(overrideOptions)` method
 that can be called on the client before `racer.createModel(data)` to provide
 extra, dynamic, customisation post-bundling.
 
+This can be used in the client browser code to, for example, force the use of
+browser channel (for testing) or pass an extraParams object:
+
+```js
+racer.overrideClientOptions({
+  browserChannelOnly: true,
+  extraParams: {
+    ticket: "<authentication-ticket>"
+  }
+})
+```
+
+`extraParams` holds name-value pairs that will get added to the query string
+of the websocket connection request and each browser channel request and can
+be useful for implementing ticket based (non-cookie) session authentication.
+
 ## WebSocket Info
 
 * [What is WebSocket?](https://www.websocket.org/)
