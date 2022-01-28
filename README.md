@@ -13,14 +13,14 @@ Transport plugin for [Racer](https://github.com/codeparty/racer). It uses pure `
 In the server part of your app:
 
 ```js
-var highway = require('racer-highway'); 
+var highway = require('racer-highway');
 
 // ...
 // var server = http.createServer
 // ...
 
 // ...
-// var store  = racer.createStore 
+// var store  = racer.createStore
 // or
 // var store  = derby.createStore
 // ...

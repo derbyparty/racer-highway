@@ -1,7 +1,7 @@
 {
   "name": "racer-highway",
   "description": "Websocket and browserchannel transport for Racer",
-  "version": "8.1.0",
+  "version": "9.0.0",
   "main": "./lib/server",
   "browser": {
     "main": "./lib/browser"
@@ -9,8 +9,10 @@
   "dependencies": {
     "browserchannel": "^2.0",
     "extend": "^2.0.0",
-    "through": "^2.3.4",
-    "ws": "~1.1"
+    "through": "^2.3.4"
+  },
+  "peerDependencies": {
+    "ws": "*"
   },
   "devDependencies": {},
   "optionalDependencies": {},
