@@ -7,22 +7,19 @@
     "main": "./lib/browser"
   },
   "dependencies": {
-    "browserchannel": "^2.0",
     "extend": "^2.0.0",
-    "through": "^2.3.4"
+    "through": "^2.3.4",
+    "ws": "^8.4.2"
   },
-  "peerDependencies": {
-    "ws": "*"
+  "devDependencies": {
+    "standard": "^16.0.4"
   },
-  "devDependencies": {},
-  "optionalDependencies": {},
   "keywords": [
     "derby",
     "derbyjs",
     "racer",
     "racerjs",
-    "websocket",
-    "browserchannel"
+    "websocket"
   ],
   "repository": {
     "type": "git",

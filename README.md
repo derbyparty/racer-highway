@@ -1,12 +1,13 @@
 # racer-highway
 [![NPM](https://nodei.co/npm/racer-highway.png?downloads=true)](https://nodei.co/npm/racer-highway/)
 
-Transport plugin for [Racer](https://github.com/codeparty/racer). It uses pure `websockets` and fallbacks to `browserchannel` in the case of old browsers and proxy errors. If you only need to use `websockets` try [racer-ws](https://github.com/derbyparty/racer-ws).
+Transport plugin for [Racer](https://github.com/codeparty/racer) which uses pure `websockets`.
 
 ## Note
 
  * Since version 7.0.0 racer-highway supports only racer >= 0.8
  * Since version 8.0.0 racer-highway supports only racer >= 0.9
+ * Version 10.0.0 dropped support for [browserchannel](https://github.com/josephg/node-browserchannel). If you want it, please use version 8.1.0 or 9.0.0
 
 ## Usage
 
@@ -35,9 +36,6 @@ expressApp.use(cookieParser());
 expressApp.use(session());
 
 // ...
-
-expressApp.use(handlers.middleware);
-
 
 server.on('upgrade', handlers.upgrade);
 ```
