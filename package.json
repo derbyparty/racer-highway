@@ -3,13 +3,14 @@
   "description": "Websocket and browserchannel transport for Racer",
   "version": "10.0.1",
   "main": "./lib/server",
-  "browser": {
-    "main": "./lib/browser"
-  },
+  "browser": "./lib/browser",
   "dependencies": {
     "extend": "^2.0.0",
     "through": "^2.3.4",
     "ws": "^1.1.5"
+  },
+  "peerDependencies": {
+    "racer": "^0.9.0"
   },
   "devDependencies": {
     "standard": "^16.0.4"
